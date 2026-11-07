@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #090510;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.shape1 {
+    width: 400px;
+    height: 400px;
+    background: #4a137b;
+    top: -100px;
+    left: -100px;
+    animation: float 8s ease-in-out infinite;
+}
+
+.shape2 {
+    width: 350px;
+    height: 350px;
+    background: #114272;
+    bottom: -50px;
+    right: -100px;
+    animation: float 10s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(30px) scale(1.1); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+.glass-container {
+    background: rgba(20, 10, 30, 0.4);
+    backdrop-filter: blur(25px) saturate(150%);
+    -webkit-backdrop-filter: blur(25px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden; 
+}
+
+.banner-wrapper {
+    width: 100%;
+    height: 140px;
+    background-color: #1c112b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.content-wrapper {
+    padding: 0 30px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #090510;
+    margin-top: -55px; 
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    background-color: #090510;
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    font-size: 11px;
+    color: #a395b8;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+}
+
+/* LA SOLUZIONE DEFINITIVA AL CENTRAGGIO */
+.link-btn {
+    display: block; /* Sostituito flex con block */
+    position: relative;
+    text-align: center; /* Centra il testo in base alla larghezza totale del bottone */
+    padding: 18px 20px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 100%;
+}
+
+.link-btn span {
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
+.link-btn i {
+    position: absolute; /* Sgancia l'icona dal flusso del testo */
+    left: 20px; /* La blocca a sinistra */
+    top: 50%;
+    transform: translateY(-50%); /* La centra verticalmente */
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.link-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.website i { color: #a259ff; }
+.website:hover { border-color: rgba(162, 89, 255, 0.5); box-shadow: 0 10px 20px rgba(162, 89, 255, 0.2); }
+
+.spotify i { color: #1DB954; }
+.spotify:hover { border-color: rgba(29, 185, 84, 0.5); box-shadow: 0 10px 20px rgba(29, 185, 84, 0.2); }
+
+.youtube i { color: #FF0000; }
+.youtube:hover { border-color: rgba(255, 0, 0, 0.5); box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2); }
+
+.amazon i { color: #00A8E1; }
+.amazon:hover { border-color: rgba(0, 168, 225, 0.5); box-shadow: 0 10px 20px rgba(0, 168, 225, 0.2); }
+
+.instagram i { background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.instagram:hover { border-color: rgba(220, 39, 67, 0.5); box-shadow: 0 10px 20px rgba(220, 39, 67, 0.2); }
+
+.x-twitter i { color: #ffffff; }
+.x-twitter:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); }
+
+.facebook i { color: #1877F2; }
+.facebook:hover { border-color: rgba(24, 119, 242, 0.5); box-shadow: 0 10px 20px rgba(24, 119, 242, 0.2); }
