@@ -125,11 +125,9 @@ p {
     width: 100%;
 }
 
-/* LA SOLUZIONE DEFINITIVA AL CENTRAGGIO */
+/* NUOVO SISTEMA A GRIGLIA PER CENTRAGGIO ASSOLUTO */
 .link-btn {
-    display: block; /* Sostituito flex con block */
-    position: relative;
-    text-align: center; /* Centra il testo in base alla larghezza totale del bottone */
+    display: block; 
     padding: 18px 20px;
     border-radius: 16px;
     text-decoration: none;
@@ -140,24 +138,27 @@ p {
     width: 100%;
 }
 
-.link-btn span {
-    font-weight: 600;
-    font-size: 15px;
-    letter-spacing: 0.3px;
+.btn-content {
+    display: grid;
+    /* 3 colonne: 30px a sinistra (icona), spazio centrale (testo), 30px a destra (vuoto per bilanciare) */
+    grid-template-columns: 30px 1fr 30px; 
+    align-items: center;
+    width: 100%;
 }
 
-.link-btn i {
-    position: absolute; /* Sgancia l'icona dal flusso del testo */
-    left: 20px; /* La blocca a sinistra */
-    top: 50%;
-    transform: translateY(-50%); /* La centra verticalmente */
+.btn-content i {
+    grid-column: 1; /* Forza l'icona nella prima colonna */
+    justify-self: center;
     font-size: 22px;
     transition: all 0.3s ease;
 }
 
-.link-btn:hover {
-    transform: translateY(-4px) scale(1.02);
-    background: rgba(255, 255, 255, 0.08);
+.btn-content span {
+    grid-column: 2; /* Forza il testo nella colonna centrale */
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.3px;
 }
 
 .website i { color: #a259ff; }
