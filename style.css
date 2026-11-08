@@ -205,3 +205,6 @@ p {
 
 .overcast i { color: #FC7E0F; }
 .overcast:hover { border-color: rgba(252, 126, 15, 0.5); box-shadow: 0 10px 20px rgba(252, 126, 15, 0.2); }
+
+.apple i { color: #9933FF; }
+.apple:hover { border-color: rgba(153, 51, 255, 0.5); box-shadow: 0 10px 20px rgba(153, 51, 255, 0.2); }
