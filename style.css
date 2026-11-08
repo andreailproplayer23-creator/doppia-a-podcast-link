@@ -10,15 +10,15 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Permette al contenitore di non essere tagliato in alto */
     color: #ffffff;
-    padding: 20px;
+    padding: 40px 20px; /* Spazio in alto e in basso per lo scroll */
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden; /* Sblocca lo scroll verticale, blocca solo quello orizzontale */
 }
 
 .bg-shape {
-    position: absolute;
+    position: fixed; /* Mantiene le sfumature ferme mentre si scrolla */
     border-radius: 50%;
     filter: blur(90px);
     z-index: 0;
@@ -61,6 +61,7 @@ body {
     position: relative;
     z-index: 1;
     overflow: hidden; 
+    margin: 0 auto; /* Centra orizzontalmente nel layout flessibile */
 }
 
 .banner-wrapper {
@@ -125,7 +126,7 @@ p {
     width: 100%;
 }
 
-/* NUOVO SISTEMA A GRIGLIA PER CENTRAGGIO ASSOLUTO */
+/* Griglia per centraggio perfetto del testo e icone a sinistra */
 .link-btn {
     display: block; 
     padding: 18px 20px;
@@ -140,41 +141,43 @@ p {
 
 .btn-content {
     display: grid;
-    /* 3 colonne: 30px a sinistra (icona), spazio centrale (testo), 30px a destra (vuoto per bilanciare) */
     grid-template-columns: 30px 1fr 30px; 
     align-items: center;
     width: 100%;
 }
 
 .btn-content i {
-    grid-column: 1; /* Forza l'icona nella prima colonna */
+    grid-column: 1; 
     justify-self: center;
     font-size: 22px;
     transition: all 0.3s ease;
 }
 
 .btn-content span {
-    grid-column: 2; /* Forza il testo nella colonna centrale */
+    grid-column: 2; 
     text-align: center;
     font-weight: 600;
     font-size: 15px;
     letter-spacing: 0.3px;
 }
 
+.link-btn:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Colori e Hover dei Brand */
 .website i { color: #a259ff; }
 .website:hover { border-color: rgba(162, 89, 255, 0.5); box-shadow: 0 10px 20px rgba(162, 89, 255, 0.2); }
-
-.spotify i { color: #1DB954; }
-.spotify:hover { border-color: rgba(29, 185, 84, 0.5); box-shadow: 0 10px 20px rgba(29, 185, 84, 0.2); }
 
 .youtube i { color: #FF0000; }
 .youtube:hover { border-color: rgba(255, 0, 0, 0.5); box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2); }
 
-.amazon i { color: #00A8E1; }
-.amazon:hover { border-color: rgba(0, 168, 225, 0.5); box-shadow: 0 10px 20px rgba(0, 168, 225, 0.2); }
-
 .instagram i { background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .instagram:hover { border-color: rgba(220, 39, 67, 0.5); box-shadow: 0 10px 20px rgba(220, 39, 67, 0.2); }
+
+.tiktok i { color: #ffffff; }
+.tiktok:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); }
 
 .x-twitter i { color: #ffffff; }
 .x-twitter:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); }
@@ -182,10 +185,12 @@ p {
 .facebook i { color: #1877F2; }
 .facebook:hover { border-color: rgba(24, 119, 242, 0.5); box-shadow: 0 10px 20px rgba(24, 119, 242, 0.2); }
 
-.tiktok i { color: #ffffff; }
-.tiktok:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); }
+.spotify i { color: #1DB954; }
+.spotify:hover { border-color: rgba(29, 185, 84, 0.5); box-shadow: 0 10px 20px rgba(29, 185, 84, 0.2); }
 
-/* Colori Nuove Piattaforme Podcast */
+.amazon i { color: #00A8E1; }
+.amazon:hover { border-color: rgba(0, 168, 225, 0.5); box-shadow: 0 10px 20px rgba(0, 168, 225, 0.2); }
+
 .deezer i { color: #A238FF; }
 .deezer:hover { border-color: rgba(162, 56, 255, 0.5); box-shadow: 0 10px 20px rgba(162, 56, 255, 0.2); }
 
