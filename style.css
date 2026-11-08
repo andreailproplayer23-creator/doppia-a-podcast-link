@@ -184,3 +184,19 @@ p {
 
 .tiktok i { color: #ffffff; }
 .tiktok:hover { border-color: rgba(255, 255, 255, 0.4); box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15); }
+
+/* Colori Nuove Piattaforme Podcast */
+.deezer i { color: #A238FF; }
+.deezer:hover { border-color: rgba(162, 56, 255, 0.5); box-shadow: 0 10px 20px rgba(162, 56, 255, 0.2); }
+
+.pocketcasts i { color: #F43E37; }
+.pocketcasts:hover { border-color: rgba(244, 62, 55, 0.5); box-shadow: 0 10px 20px rgba(244, 62, 55, 0.2); }
+
+.castbox i { color: #F58220; }
+.castbox:hover { border-color: rgba(245, 130, 32, 0.5); box-shadow: 0 10px 20px rgba(245, 130, 32, 0.2); }
+
+.podcastaddict i { color: #FF7A00; }
+.podcastaddict:hover { border-color: rgba(255, 122, 0, 0.5); box-shadow: 0 10px 20px rgba(255, 122, 0, 0.2); }
+
+.overcast i { color: #FC7E0F; }
+.overcast:hover { border-color: rgba(252, 126, 15, 0.5); box-shadow: 0 10px 20px rgba(252, 126, 15, 0.2); }
